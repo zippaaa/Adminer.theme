@@ -510,8 +510,12 @@ tr.odd td {
 	width: 20rem;
 	margin: 0
 }
-
-#menu a, #menu p a[href*="&select="] {
+#tables {
+	padding: 0 0 0 5px;
+	margin: 0;
+	list-style: none;
+}
+#menu a, #tables .select {
 	display: inline-block;
 	vertical-align: middle;
 	margin-right: 5px
@@ -544,6 +548,10 @@ tr.odd td {
 
 #schema .table b:hover {
 	color: #fff
+}
+
+.logout {
+	top: 28px;
 }
 
 input[name=logout] {
@@ -610,7 +618,7 @@ input[type=submit]:active {
 	top: 1px
 }
 
-#menu p a[href*="&select="] {
+#tables .select {
 	background: url(data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABAAAAAQCAYAAAAf8/9hAAAABGdBTUEAAK/INwWK6QAAABl0RVh0U29mdHdhcmUAQWRvYmUgSW1hZ2VSZWFkeXHJZTwAAAHISURBVDjLpVPNK0RRFP+9D98syMwUspHkm9I0YkFZWBFKkZ0s7a3Ewh+ilChK7FgoZCJFKYlYKB8zk2+Z5t0P577He29kQU7dd+6575zf+d1zztWklPiPmOozt/U4SThjXIoyIQS4AJjSXO0lGGlvcXAm6Vzsz4xUhm0AIeX4QLig+C+ZpxbOG1wGhGYHr1zMUmZGWRgs0ha3PE1nX/8mWmdgWTzLB+DUYbhm9FfZ35IEyrhXA3VXJfPbsV8B9LQUIeUHYJ8ASobag1jcucNgW8g9W4reYSDi2YnnZDoDiwCokDANct6NwTB0LEdj0HRA/wxa2SN25JNBEdWluUhZ366gqmAaGvrCAXKOozccTGPgt8+vn8GYSGcgyTYp3dpBnBg42nbQPRBTo5bTvqYkmxL6AQhNTWQGBXY3B7BxlEBXozcW64dxRKoKUZBju+P06gl5WaaviMJBM3TNDlbypemIZgHYOnlwASsCmW7nHADGnBoQ3c76YmweJ9BR5zFYjsbRHwm4tmJg6PhWA7pCXXk+bu7fURHKweXtq/sWaksz7SC/CCGFrwtyZ3r+rCnFRZ7qr1qc6mLZj4f9OEyPL8lVpbX/PucPv5QPKHB1TdEAAAAASUVORK5CYII=) left center no-repeat;
 	height: 15px;
 	padding: 0;
@@ -618,7 +626,15 @@ input[type=submit]:active {
 	width: 15px;
 	text-decoration: none;
 	line-height: 1;
-	color: transparent
+	color: transparent;
+	margin-right: 0;
+}
+#tables .structure {
+	min-width: 	calc(100% - 5px - 25px);
+	padding-left: 5px;
+}
+#tables .structure.active, #tables .select.active + .structure {
+	background-color: #1a5fa5;
 }
 
 #menu a[href$="sql="] {
@@ -704,7 +720,7 @@ table thead a[href*="&modify"] {
 	padding-right: 18px
 }
 
-table thead input + a[href*="&modify"] {
+table thead input ~ a[href*="&modify"] {
 	width: 0;
 	display: inline-block;
 	height: 16px;
@@ -719,7 +735,7 @@ table tbody a[href*="&edit="][href*="&where"] {
 	padding-right: 18px
 }
 
-table tbody input + a[href*="&edit="][href*="&where"] {
+table tbody input ~ a[href*="&edit="][href*="&where"] {
 	width: 0;
 	display: inline-block;
 	height: 16px;
