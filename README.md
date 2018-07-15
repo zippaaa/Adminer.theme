@@ -6,4 +6,4 @@ https://www.adminer.org
 https://github.com/vrana/adminer/
 
 # Alternative design
-![alt tag](https://github.com/Line117/Adminer.php-theme/blob/master/adm.png)
+![alt tag](https://github.com/alekseymvt/Adminer.theme/blob/master/adm.png)
